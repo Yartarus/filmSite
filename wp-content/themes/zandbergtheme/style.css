@@ -1,0 +1,368 @@
+/*
+Theme Name: Zandberg Theme
+Author: Thierry Decker
+Author URI: https://vegibit.com
+Version: 1.0
+ */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #4f4f4f;
+}
+
+a:link, a:visited {
+    color: #4285f4;
+}
+
+p {
+    line-height: 1.7em;
+}
+
+div.container {
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: 50% 20% 30%;
+    grid-template-areas:
+      'header header header'
+      'main main right-widgets'
+      'footer footer footer';
+    gap: 0px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    color: #4f4f4f;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    div.container {
+        grid-template-areas:
+          'header header header'
+          'main main main'
+          'footer right-widgets right-widgets';
+    }
+}
+
+article.post {
+    overflow: hidden;
+    border-bottom: 4px dashed #ecf0f1;
+}
+
+article.post:last-of-type {
+    border-bottom: none;
+}
+
+.main-column {
+    grid-area: main;
+    padding: 5px;
+    border-top: 3px solid #ecf0f1;
+}
+
+.sidebar-column {
+    grid-area: right-widgets;
+    font-size: 14px;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-top: 3px solid #ecf0f1;
+}
+
+.site-header {
+    grid-area: header;
+    background-color: #FFFF00;
+    color: #000000;
+}
+
+.header-content {
+    padding: 8px;
+}
+
+.header-content a:link, .header-content a:visited {
+    color: #000000;
+}
+
+.page-layout h2 {
+    font-size: 200%;
+}
+
+.site-footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-top: 3px solid #ecf0f1;
+}
+
+.site-footer p {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: 8px;
+    font-size: 18px;
+    background-color: #FFFF00;
+    color: #000000;
+    border-bottom: 2px solid #4f4f4f;
+}
+
+/* Post format styles */
+.post-aside {
+    font-size: 130%;
+    background-color: #fdffdc;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.post-gallery {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Search bar style */
+.header-search {
+    float: right;
+}
+
+.screen-reader-text {
+  clip-path: none;
+  position: static;
+}
+
+#searchsubmit {
+    background-color: #4f4f4f;
+    color: #FFFFFF;
+    padding: 5px 8px;
+    font-size: 15px;
+    line-height: 1.3;
+    cursor: pointer;
+}
+
+#s {
+    height: 18px;
+    padding: 5px 8px;
+    font-size: 15px;
+    line-height: 1.1;
+}
+
+/* Nav Menu */
+.navigation-menu ul {
+    margin: 0;
+    padding: 5px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.navigation-menu a:link, .navigation-menu a:visited {
+    color: #FFFF00;
+}
+
+.navigation-menu ul:before, .navigation-menu ul:after {
+    content: "";
+    display: table;
+}
+
+.navigation-menu ul:after {
+    clear: both;
+}
+
+.navigation-menu ul li {
+    list-style: none;
+    float: left;
+}
+
+.navigation-menu ul li.current-menu-item a:link,
+.navigation-menu ul li.current-menu-item a:visited,
+.navigation-menu ul li.current-page-ancestor a:link,
+.navigation-menu ul li.current-page-ancestor a:visited {
+    background-color: #FFFF00;
+    color: #000000;
+}
+
+.navigation-menu ul li a:link,
+.navigation-menu ul li a:visited {
+    display: block;
+    padding: 12px 17px;
+    border-right: 2px solid #4f4f4f;
+    text-decoration: none;
+}
+
+.navigation-menu ul li a:hover {
+    background-color: #4f4f4f;
+}
+
+/* Child page navigation */
+.child-navigation-menu {
+    list-style: none;
+}
+
+.child-navigation-menu ul {
+    margin: 20px;
+    padding: 0;
+}
+
+.child-navigation-menu ul:before, .navigation-menu ul:after {
+    content: "";
+    display: table;
+}
+
+.child-navigation-menu ul li {
+    list-style: none;
+    float: left;
+    margin-right: 3px;
+}
+
+.child-navigation-menu ul li {
+    margin-right: 20px;
+    font-size:80%;
+}
+
+.child-navigation-menu ul li a:link,
+.child-navigation-menu ul li a:visited {
+    text-decoration: none;
+}
+
+.child-navigation-menu ul li.current_page_item a:link,
+.child-navigation-menu ul li.current_page_item a:visited {
+    border-bottom: solid 3px #ecf0f1;
+}
+
+/* Pagination */
+.movie-pagination {
+    font-size: 14px;
+}
+
+.movie-pagination ul {
+    margin: 0;
+    padding: 5px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.movie-pagination a:link, .movie-pagination a:visited {
+    color: #FFFF00;
+}
+
+.movie-pagination ul:before, .movie-pagination ul:after {
+    content: "";
+    display: table;
+}
+
+.movie-pagination ul:after {
+    clear: both;
+}
+
+.movie-pagination ul li {
+    list-style: none;
+    width: 50%;
+}
+
+.movie-pagination ul li.next {
+    float: right;
+}
+.movie-pagination ul li.previous {
+    float: left;
+}
+
+.movie-pagination ul li a:link,
+.movie-pagination ul li a:visited {
+    display: block;
+    padding: 8px 13px;
+    text-decoration: none;
+}
+.movie-pagination ul li.next a {
+    text-align: right;
+    border-left: 1px solid #4f4f4f;
+}
+.movie-pagination ul li.previous a {
+    text-align: left;
+    border-right: 1px solid #4f4f4f;
+}
+
+.movie-pagination ul li a:hover {
+    background-color: #4f4f4f;
+}
+
+/* Post Meta */
+.post-meta {
+    clear: both;
+    font-size: 14px;
+    color: #888;
+}
+
+p.post-meta a:link, p.post-meta a:visited {
+    color:#888;
+}
+
+/* Featured images position and styling */
+.small-thumbnail {
+    float: left;
+    margin: 0px 10px 10px 0px;
+}
+
+.single-post-image {
+    float: left;
+    margin: 0px 12px 12px 0px;
+}
+
+/* Custom Page Template Test Table */
+.tdcontent {
+    border: dashed 3px #ffd35e;
+    background: #fdf5e1;
+    padding: 10px;
+}
+
+.tdtitle {
+    border: dashed 3px #2ecc71;
+    background: #d7fee8;
+    padding: 10px;
+}
+
+/* Widget area styling */
+.widget-area {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 769px) {
+    /* For mobile phones: */
+    .site-footer .widget-area {
+        flex-direction: row;
+    }
+}
+
+.widget-area a:link, .widget-area a:visited {
+    color: #FFFF00;
+}
+
+.widget-item {
+    padding: 8px;
+    border-color: #4f4f4f;
+    border-style: solid;
+    border-width: 0px 2px 2px 0;
+}
+
+/* Genres styling */
+.movie-genres {
+    clear: both;
+    font-size: 14px;
+    font-weight: bold;
+    color: #888;
+}
+
+p.movie-genres a:link, p.movie-genres a:visited {
+    color:#888;
+}
+
+/* Cancel float on mobile */
+@media only screen and (max-width: 768px) {
+    .cancel-float-mobile {
+        float: none;
+    }
+}
+
+/* Spacing classes */
+.spacing-top-40 {
+    margin-top: 40px;
+}
